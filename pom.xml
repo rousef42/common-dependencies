@@ -12,6 +12,18 @@
     <packaging>pom</packaging>
 
     <properties>
+
+        <!-- distribution properties -->
+        <distribution.id>vce.release</distribution.id>
+        <distribution.name>vce.release</distribution.name>
+        <distribution.url>http://repo.vmo.lab:8080/artifactory/libs-release-local</distribution.url>
+        <snapshot.id>vce.snapshot</snapshot.id>
+        <snapshot.name>vce.snapshot</snapshot.name>
+        <snapshot.url>http://repo.vmo.lab:8080/artifactory/libs-snapshot-local</snapshot.url>
+        <buildrepo.url>http://repo.vmo.lab:8080/artifactory/build-repos/</buildrepo.url>
+        <scm.git.repo.url>https://eos2git.cec.lab.emc.com</scm.git.repo.url>
+
+        <!-- version properties -->
         <slf4j-api-version>1.7.21</slf4j-api-version>
         <log4j-version>1.2.17</log4j-version>
         <commons-beanutils-version>1.9.3</commons-beanutils-version>
@@ -42,6 +54,7 @@
         <h2-version>1.4.192</h2-version>
         <flyway-version>4.0.3</flyway-version>
         <commons-collections4-version>4.1</commons-collections4-version>
+
     </properties>
 
     <dependencyManagement>
@@ -329,5 +342,19 @@
 
         </dependencies>
     </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>${distribution.id}</id>
+            <name>${distribution.name}</name>
+            <url>${distribution.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>${snapshot.id}</id>
+            <name>${snapshot.name}</name>
+            <url>${snapshot.url}</url>
+            <uniqueVersion>true</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
