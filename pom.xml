@@ -9,12 +9,18 @@
 
     <packaging>pom</packaging>
 
+    <parent>
+        <groupId>com.dell.cpsd</groupId>
+        <artifactId>root-parent</artifactId>
+        <version>0.1</version>
+    </parent>
+
     <scm>
         <connection>scm:git:${scm.git.repo.url}/VCE-Symphony/common-dependencies.git</connection>
-      <tag>HEAD</tag>
-  </scm>
-    
-<properties>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
 
         <!-- distribution properties -->
         <distribution.id>vce.release</distribution.id>
@@ -394,19 +400,5 @@
 
         </dependencies>
     </dependencyManagement>
-
-    <distributionManagement>
-        <repository>
-            <id>${distribution.id}</id>
-            <name>${distribution.name}</name>
-            <url>${distribution.url}</url>
-        </repository>
-        <snapshotRepository>
-            <id>${snapshot.id}</id>
-            <name>${snapshot.name}</name>
-            <url>${snapshot.url}</url>
-            <uniqueVersion>true</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
 
 </project>
