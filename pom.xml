@@ -11,7 +11,11 @@
 
     <packaging>pom</packaging>
 
-    <properties>
+    <scm>
+        <connection>scm:git:${scm.git.repo.url}/VCE-Symphony/common-dependencies.git</connection>
+    </scm>
+    
+<properties>
 
         <!-- distribution properties -->
         <distribution.id>vce.release</distribution.id>
