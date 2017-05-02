@@ -5,32 +5,22 @@
     <groupId>com.dell.cpsd</groupId>
     <artifactId>common-dependencies</artifactId>
     <name>common-dependencies</name>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.1</version>
 
     <packaging>pom</packaging>
 
     <parent>
         <groupId>com.dell.cpsd</groupId>
         <artifactId>root-parent</artifactId>
-        <version>0.1</version>
+        <version>0.2.3</version>
     </parent>
 
     <scm>
-        <connection>scm:git:${scm.git.repo.url}/VCE-Symphony/common-dependencies.git</connection>
-        <tag>HEAD</tag>
+        <connection>https://eos2git.cec.lab.emc.com/VCE-Symphony/common-dependencies.git</connection>
+        <tag>common-dependencies-1.1</tag>
     </scm>
 
     <properties>
-
-        <!-- distribution properties -->
-        <distribution.id>vce.release</distribution.id>
-        <distribution.name>vce.release</distribution.name>
-        <distribution.url>http://repo.vmo.lab:8080/artifactory/libs-release-local</distribution.url>
-        <snapshot.id>vce.snapshot</snapshot.id>
-        <snapshot.name>vce.snapshot</snapshot.name>
-        <snapshot.url>http://repo.vmo.lab:8080/artifactory/libs-snapshot-local</snapshot.url>
-        <buildrepo.url>http://repo.vmo.lab:8080/artifactory/build-repos/</buildrepo.url>
-        <scm.git.repo.url>https://eos2git.cec.lab.emc.com</scm.git.repo.url>
 
         <!-- version properties -->
         <slf4j-api-version>1.7.21</slf4j-api-version>
