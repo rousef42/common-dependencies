@@ -1,7 +1,3 @@
-<!--
-    Copyright (c) 2017 Dell Inc. or its subsidiaries.  All Rights Reserved.
-    Dell EMC Confidential/Proprietary Information
- -->
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -10,7 +6,6 @@
     <artifactId>common-dependencies</artifactId>
     <name>common-dependencies</name>
     <version>1.2-SNAPSHOT</version>
-
     <packaging>pom</packaging>
 
     <parent>
@@ -19,6 +14,11 @@
         <version>0.2.3</version>
     </parent>
 
+<!--
+    Copyright (c) 2017 Dell Inc. or its subsidiaries.  All Rights Reserved.
+    Dell EMC Confidential/Proprietary Information
+-->
+    
     <scm>
         <connection>https://eos2git.cec.lab.emc.com/VCE-Symphony/common-dependencies.git</connection>
         <tag>HEAD</tag>
