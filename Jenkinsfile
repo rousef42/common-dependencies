@@ -30,11 +30,11 @@ pipeline {
         stage('Deploy') {
             when {
                 expression {
-                    return env.BRANCH_NAME ==~ /master|release\/.*/
+                    return env.BRANCH_NAME ==~ /develop|release\/.*/
                 }
             }
             steps {
-                sh "mvn deploy -DskipTests -DskipITs"
+                sh "mvn deploy -DskipTests -DskipITs -Dinternal-repos"
             }
         }
         stage('SonarQube Analysis') {
