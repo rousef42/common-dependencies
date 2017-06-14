@@ -63,6 +63,7 @@ pipeline {
     }
     post {
         always{
+            sh "mvn versions:display-dependency-updates"
             cleanWorkspace()   
         }
         success {
