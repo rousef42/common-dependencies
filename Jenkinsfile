@@ -64,7 +64,8 @@ pipeline {
     post {
         always{
             sh "mvn versions:display-dependency-updates"
-            //cleanWorkspace()   
+            archiveArtifacts 'outdated-dependencies.txt'
+            cleanWorkspace()   
         }
         success {
             emailext attachLog: true, 
