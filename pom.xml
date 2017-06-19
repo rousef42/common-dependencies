@@ -512,6 +512,7 @@
 				<version>2.4</version>
 				<inherited>false</inherited>
 				<configuration>
+					<goal>display-dependency-updates</goal>
 					<outputFile>outdated-dependencies.txt</outputFile>
 				</configuration>
 			</plugin>				
