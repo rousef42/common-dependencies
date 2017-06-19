@@ -63,6 +63,8 @@ pipeline {
     }
     post {
         always{
+            sh "mvn versions:display-dependency-updates"
+            archiveArtifacts 'outdated-dependencies.txt'
             cleanWorkspace()   
         }
         success {
