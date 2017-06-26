@@ -7,8 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/)
 ## [Unreleased]
 
 ### Added
-
+- Creation of the initial Changelog file
 ### Changed
+- Change to the root-parent version
+- Merge develop branch to master branch
+
+
 
 ### Removed
 
