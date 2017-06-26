@@ -42,19 +42,23 @@ pipeline {
                 sh "mvn verify -Dmaven.repo.local=.repo"
             }
         }
-        stage('Deploy') {
-            when {
-                expression {
-                    return env.BRANCH_NAME ==~ /master|develop|stable\/.*|release\/.*/
+       stage('Deploy') {
+            steps {
+                script {
+                    if (env.BRANCH_NAME ==~ /stable.*/) {
+                        withCredentials([string(credentialsId: 'GPG-Dell-Key', variable: 'GPG_PASSPHRASE')]) {
+                            sh "mvn deploy -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true -Ppublish-release -Dgpg.passphrase=${GPG_PASSPHRASE} -Dgpg.keyname=73BD7C5F -DskipJavadoc=false -DskipJavasource=false"
+                        }
+                    } else {
+                        sh "mvn deploy -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
+                    }
                 }
             }
-            steps {
-                sh "mvn deploy -Dinternal-repos -Dmaven.repo.local=.repo -DskipTests=true -DskipITs=true"
-            }
         }
-        stage('SonarQube Analysis') {
+        stage('NexB Scan') {
             steps {
-                doSonarAnalysis()    
+                sh 'rm -rf .repo'
+                doNexbScanning()
             }
         }
         stage('Third Party Audit') {
@@ -62,29 +66,22 @@ pipeline {
                 doThirdPartyAudit()
             }
         }
-        stage('Github Release') {
-            steps {
-                githubRelease()
-            }
-        }
-        stage('NexB Scan') {
-            steps {
-                sh "rm -rf .repo"
-                doNexbScanning()
-           }
-        }
         stage('PasswordScan') {
             steps {
                 doPwScan()
             }
         }
+
+        stage('Github Release') {
+            steps {
+                githubRelease()
+            }
+        }
     }
     post {
-        always {
-            sh "mvn versions:display-dependency-updates"
-            archiveArtifacts 'outdated-dependencies.txt'
-            cleanWorkspace()   
-        }
+       always {
+                   cleanWorkspace()
+               }
         success {
             successEmail()
         }
