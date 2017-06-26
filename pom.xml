@@ -60,35 +60,28 @@
 		<rabbitmq-client-version>4.0.0</rabbitmq-client-version>
 
 		<servlet.version>3.1.0</servlet.version>
-
 		<slf4j-api-version>1.7.21</slf4j-api-version>
-
 		<springfox-swagger>2.7.0</springfox-swagger>
-
 		<spring-amqp-version>1.6.5.RELEASE</spring-amqp-version>
 		<spring-boot.version>1.5.3.RELEASE</spring-boot.version>
 		<spring.cloud.version>1.1.0.RELEASE</spring.cloud.version>
-
 		<spring-core-version>4.3.8.RELEASE</spring-core-version>
-
 		<spring-rabbit-version>1.6.5.RELEASE</spring-rabbit-version>
 		<spring-retry-version>1.1.5.RELEASE</spring-retry-version>
 		<spring-security-core-version>4.2.2.RELEASE</spring-security-core-version>
-
 		<spring.version>4.0.4.RELEASE</spring.version>
-
 		<swagger-jersey2-jaxrs-version>1.5.13</swagger-jersey2-jaxrs-version>
+		
 		<test-everit-json-schema-version>1.5.1</test-everit-json-schema-version>
 
 		<validation.api-version>1.1.0.Final</validation.api-version>
-
-
+		
+		<versions-maven-plugin-version>2.4</versions-maven-plugin-version>
+		
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
-
-
 			<dependency>
 				<groupId>net.minidev</groupId>
 				<artifactId>json-smart</artifactId>
@@ -509,7 +502,7 @@
             		<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.4</version>
+				<version>${versions-maven-plugin-version}</version>
 				<inherited>false</inherited>
 				<configuration>
 					<outputFile>outdated-dependencies.txt</outputFile>
