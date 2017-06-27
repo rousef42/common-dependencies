@@ -8,7 +8,6 @@
 ## Description
 This repository contains common dependencies and properties required by other Project Symphony repositories.
 It is included by default in some of the new Project Symphony repository dependencies and includes the following configurations:
- - Maven AntRun
  - Repository information for Common Dependencies
 
 For configurations for a specific repository, refer to pom.xml.
