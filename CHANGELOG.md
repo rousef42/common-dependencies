@@ -5,14 +5,29 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/)
 
 ## [Unreleased]
+## 1.0.0 - 2017-06-28
 
 ### Added
 - Creation of the initial Changelog file
+- Add maven versions plugin to list outdated dependencies.
+
 ### Changed
-- Change to the root-parent version
-- Merge develop branch to master branch
+- Update to readme format and additional context
+- Update the plugin versions of Maven
+- Change to snapshot version 
+
+
+### Remved
+
+
+### Added
+## 1.1 - 2017-05-01
+
+### Added
+## 1.0 - 2017-01-17
 
 
 
-### Removed
+
+
 

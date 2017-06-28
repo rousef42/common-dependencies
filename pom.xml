@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+		
+<!--
+    Copyright (c) 2017 Dell Inc. or its subsidiaries.  All Rights Reserved.
+-->
 
     <groupId>com.dell.cpsd</groupId>
 	<artifactId>common-dependencies</artifactId>
@@ -13,11 +17,14 @@
 		<artifactId>root-parent</artifactId>
         <version>1.0.0</version>
 	</parent>
-
-<!--
-    Copyright (c) 2017 Dell Inc. or its subsidiaries.  All Rights Reserved.
--->
-
+	
+	<licenses>
+                <license>
+                        <name>Eclipse Public License - v 1.0</name>
+                        <url>http://www.eclipse.org/legal/epl-v10.html</url>
+                </license>
+        </licenses>
+	
 	<scm>
 		<connection>https://eos2git.cec.lab.emc.com/VCE-Symphony/common-dependencies.git</connection>
 		<tag>HEAD</tag>
