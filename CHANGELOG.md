@@ -20,10 +20,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/)
 ### Remved
 
 
-### Added
 ## 1.1 - 2017-05-01
 
-### Added
+
 ## 1.0 - 2017-01-17
 
 
