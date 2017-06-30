@@ -80,8 +80,8 @@ pipeline {
     }
     post {
        always {
-                   cleanWorkspace()
-               }
+            cleanWorkspace()
+        }
         success {
             successEmail()
         }
