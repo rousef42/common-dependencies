@@ -19,6 +19,12 @@
 	</parent>
 
 
+  <scm>
+        <connection>scm:git:https://github.com/dellemc-symphony/common-dependencies.git</connection>
+        <developerConnection>scm:git:https://github.com/dellemc-symphony/common-dependencies.git</developerConnection>
+        <url>https://github.com/dellemc-symphony/common-dependencies/tree/master</url>
+        <tag>HEAD</tag>
+  </scm>
 	
 	<licenses>
         <license>
@@ -65,12 +71,7 @@
             <organizationUrl>https://github.com/sannab2</organizationUrl>
          </developer>
     </developers>
-	
-	<scm>
-		<connection>https://eos2git.cec.lab.emc.com/VCE-Symphony/common-dependencies.git</connection>
-		<tag>HEAD</tag>
-	</scm>
-
+  
 	<properties>
 
 		<!-- version properties -->
