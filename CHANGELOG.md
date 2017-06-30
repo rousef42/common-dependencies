@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/)
 
 ## [Unreleased]
 
+## [1.2.0] - 2017-06-30
+
 ### Added
 - The initial changelog file.
 - Inclusion of the Dell Inc. Copyright information.
@@ -63,10 +65,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/)
 - Added distribution properties.
 - Added version properties.
 
-[Unreleased]: https://github.com/dellemc-symphony/common-dependencies/compare/common-dependencies-1.1...HEAD
+[Unreleased]: https://github.com/dellemc-symphony/common-dependencies/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/dellemc-symphony/common-dependencies/compare/common-dependencies-1.1...1.2.0
 [1.1.0]: https://github.com/dellemc-symphony/common-dependencies/compare/common-dependencies-1.0...common-dependencies-1.1
-
-
-
-
-
