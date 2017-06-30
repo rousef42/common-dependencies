@@ -6,11 +6,22 @@
 
 # common-dependencies
 ## Description
-This repository contains common dependencies and properties required by other Project Symphony repositories.
-It is included by default in some of the new Project Symphony repository dependencies and includes the following configurations:
- - Repository information for Common Dependencies
 
-For configurations for a specific repository, refer to pom.xml.
+This repository contains common dependencies and their retrospective versions required by the Project Symphony repositories.
+It is included by some Project Symphony repositories and includes (but is not limited to) the following dependencies:
+- Spring dependencies
+- Jackson dependencies
+- Google dependencies
+- logging dependencies
+- JSON dependencies
+- persistence dependencies
+- commons dependencies
+- web dependencies
+- JCommander dependencies
+- documentation dependencies
+- test dependencies
+
+For the full list of dependencies, refer to pom.xml.
 
 ## Documentation
 You can find additional documentation for Project Symphony at [dellemc-symphony.readthedocs.io][documentation].

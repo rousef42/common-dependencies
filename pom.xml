@@ -17,13 +17,54 @@
 		<artifactId>root-parent</artifactId>
         <version>1.0.0</version>
 	</parent>
+
+
 	
 	<licenses>
-                <license>
-                        <name>Eclipse Public License - v 1.0</name>
-                        <url>http://www.eclipse.org/legal/epl-v10.html</url>
-                </license>
-        </licenses>
+        <license>
+            <name>Eclipse Public License - v 1.0</name>
+            <url>http://www.eclipse.org/legal/epl-v10.html</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Frank Rouse</name>
+            <email>frank.rouse@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/rousef42</organizationUrl>
+        </developer>
+        <developer>
+            <name>Desmond Collins</name>
+            <email>desmond.collins@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/giddyelysium</organizationUrl>
+        </developer>
+        <developer>
+            <name>Jeff Cheng</name>
+            <email>jeffery.cheng@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/jccheng78</organizationUrl>
+        </developer>
+        <developer>
+            <name>Purna Chamala</name>
+            <email>purna.chamala@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/chamap1</organizationUrl>
+        </developer>
+        <developer>
+            <name>Yohann Duchenay</name>
+            <email>yohann.duchenay@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/duchey</organizationUrl>
+        </developer>
+        <developer>
+            <name>Bheemesh Sannapareddi</name>
+            <email>b.sannapareddi@dell.com</email>
+            <organization>com.dell.cpsd</organization>
+            <organizationUrl>https://github.com/sannab2</organizationUrl>
+         </developer>
+    </developers>
 	
 	<scm>
 		<connection>https://eos2git.cec.lab.emc.com/VCE-Symphony/common-dependencies.git</connection>

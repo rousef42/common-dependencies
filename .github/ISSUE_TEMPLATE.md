@@ -8,7 +8,6 @@ that exercises the functionality in question.
 Direct any questions to our [#symphony][slack] channel or [Google Groups][googlegroups]
 
 Please mark with an [X] and fill in all items that relate to your issue and environment:
-
 -->
 
 - [ ] I have read the [CONTRIBUTION GUIDE][contributing]
