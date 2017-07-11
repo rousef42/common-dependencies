@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-		
-<!--
-    Copyright (c) 2017 Dell Inc. or its subsidiaries.  All Rights Reserved.
--->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+        Copyright (c) 2017 Dell Inc. or its subsidiaries.  All Rights Reserved.
+    -->
 
     <groupId>com.dell.cpsd</groupId>
-	<artifactId>common-dependencies</artifactId>
-	<name>common-dependencies</name>
-	<version>1.3.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <artifactId>common-dependencies</artifactId>
+    <name>common-dependencies</name>
+    <version>1.3.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<parent>
-		<groupId>com.dell.cpsd</groupId>
-		<artifactId>root-parent</artifactId>
-        	<version>1.0.0</version>
-	</parent>
+    <parent>
+        <groupId>com.dell.cpsd</groupId>
+        <artifactId>root-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
 
 
-  <scm>
+    <scm>
         <connection>scm:git:https://github.com/dellemc-symphony/common-dependencies.git</connection>
         <developerConnection>scm:git:https://github.com/dellemc-symphony/common-dependencies.git</developerConnection>
         <url>https://github.com/dellemc-symphony/common-dependencies/tree/master</url>
         <tag>HEAD</tag>
-  </scm>
-	
-	<licenses>
+    </scm>
+
+    <licenses>
         <license>
             <name>Eclipse Public License - v 1.0</name>
             <url>http://www.eclipse.org/legal/epl-v10.html</url>
@@ -69,494 +70,494 @@
             <email>b.sannapareddi@dell.com</email>
             <organization>com.dell.cpsd</organization>
             <organizationUrl>https://github.com/sannab2</organizationUrl>
-         </developer>
+        </developer>
     </developers>
-  
-	<properties>
-
-		<!-- version properties -->
-		<commons-collections-version>3.2.2</commons-collections-version>
-		<commons-collections4-version>4.1</commons-collections4-version>
-		<commons-beanutils-version>1.9.3</commons-beanutils-version>
-		<commons-io-version>2.5</commons-io-version>
-		<commons-lang-version>2.6</commons-lang-version>
-		<commons-lang3-version>3.5</commons-lang3-version>
-
-		<flyway-version>4.2.0</flyway-version>
-
-		<gson-version>2.8.1</gson-version>
-		<guava-version>22.0</guava-version>
-
-		<h2-version>1.4.195</h2-version>
-		<hsqldb-version>2.4.0</hsqldb-version>
-
-		<jackson-core-version>2.8.5</jackson-core-version>
-		<jcommander-version>1.72</jcommander-version>
-		<jersey-version>2.24.1</jersey-version>
-		<jsonschema2pojo-version>0.4.35</jsonschema2pojo-version>
-		<json-smart>2.3</json-smart>
-		<junit-version>4.12</junit-version>
-
-		<log4j-version>1.2.17</log4j-version>
-
-		<mockito-core-version>2.8.9</mockito-core-version>
-		<mockito-all-version>1.10.19</mockito-all-version>
-
-		<org.hibernate-version>5.2.3.Final</org.hibernate-version>
-		<org.hibernate.javax.persistence-version>1.0.0.Final</org.hibernate.javax.persistence-version>
-		<org.postgresql-version>9.4.1212.jre7</org.postgresql-version>
-
-		<rabbitmq-client-version>4.0.0</rabbitmq-client-version>
-
-		<servlet.version>3.1.0</servlet.version>
-		<slf4j-api-version>1.7.21</slf4j-api-version>
-		<springfox-swagger>2.7.0</springfox-swagger>
-		<spring-amqp-version>1.6.5.RELEASE</spring-amqp-version>
-		<spring-boot.version>1.5.3.RELEASE</spring-boot.version>
-		<spring.cloud.version>1.1.0.RELEASE</spring.cloud.version>
-		<spring-core-version>4.3.8.RELEASE</spring-core-version>
-		<spring-rabbit-version>1.6.5.RELEASE</spring-rabbit-version>
-		<spring-retry-version>1.1.5.RELEASE</spring-retry-version>
-		<spring-security-core-version>4.2.2.RELEASE</spring-security-core-version>
-		<spring.version>4.0.4.RELEASE</spring.version>
-		<swagger-jersey2-jaxrs-version>1.5.13</swagger-jersey2-jaxrs-version>
-		
-		<test-everit-json-schema-version>1.5.1</test-everit-json-schema-version>
-
-		<validation.api-version>1.1.0.Final</validation.api-version>
-		
-		<versions-maven-plugin-version>2.4</versions-maven-plugin-version>
-		
-	</properties>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>net.minidev</groupId>
-				<artifactId>json-smart</artifactId>
-				<version>${json-smart}</version>
-			</dependency>
-
-			<!-- Spring dependencies -->
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-aop</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-beans</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-core</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-expression</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-jdbc</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-orm</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-test</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-tx</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-web</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.amqp</groupId>
-				<artifactId>spring-amqp</artifactId>
-				<version>${spring-amqp-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.amqp</groupId>
-				<artifactId>spring-rabbit</artifactId>
-				<version>${spring-rabbit-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-retry</artifactId>
-				<version>${spring-retry-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.security</groupId>
-				<artifactId>spring-security-core</artifactId>
-				<version>${spring-security-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.integration</groupId>
-				<artifactId>spring-integration-core</artifactId>
-				<version>${spring-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring-boot.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-starter-config</artifactId>
-				<version>${spring.cloud.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter</artifactId>
-				<version>${spring-boot.version}</version>
-
-				<exclusions>
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>log4j-over-slf4j</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>ch.qos.logback</groupId>
-						<artifactId>logback-classic</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-web</artifactId>
-				<version>${spring-boot.version}</version>
-
-			</dependency>
-
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-amqp</artifactId>
-				<version>${spring-boot.version}</version>
-				
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-aop</artifactId>
-				<version>${spring-boot.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-jersey</artifactId>
-				<version>${spring-boot.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-test</artifactId>
-				<version>${spring-boot.version}</version>
-				<scope>test</scope>
-			</dependency>
-
-			<!-- Jackson dependencies -->
-
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-annotations</artifactId>
-				<version>${jackson-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-core</artifactId>
-				<version>${jackson-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-databind</artifactId>
-				<version>${jackson-core-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.rabbitmq</groupId>
-				<artifactId>amqp-client</artifactId>
-				<version>${rabbitmq-client-version}</version>
-			</dependency>
-
-			<!-- Google dependencies -->
-
-			<dependency>
-				<groupId>com.google.code.gson</groupId>
-				<artifactId>gson</artifactId>
-				<version>${gson-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.google.guava</groupId>
-				<artifactId>guava</artifactId>
-				<version>${guava-version}</version>
-			</dependency>
-
-			<!-- Logging dependencies -->
-
-			<dependency>
-				<groupId>log4j</groupId>
-				<artifactId>log4j</artifactId>
-				<version>${log4j-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${slf4j-api-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-ext</artifactId>
-				<version>${slf4j-api-version}</version>
-				<scope>compile</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-log4j12</artifactId>
-				<version>${slf4j-api-version}</version>
-			</dependency>
-
-			<!-- Json dependencies -->
-
-			<dependency>
-				<artifactId>jsonschema2pojo-core</artifactId>
-				<groupId>org.jsonschema2pojo</groupId>
-				<version>${jsonschema2pojo-version}</version>
-			</dependency>
-
-			<!-- Persistence dependencies -->
-
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-core</artifactId>
-				<version>${org.hibernate-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-				<version>${org.postgresql-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.hibernate.javax.persistence</groupId>
-				<artifactId>hibernate-jpa-2.1-api</artifactId>
-				<version>${org.hibernate.javax.persistence-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>javax.validation</groupId>
-				<artifactId>validation-api</artifactId>
-				<version>${validation.api-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-core</artifactId>
-				<version>${flyway-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.h2database</groupId>
-				<artifactId>h2</artifactId>
-				<version>${h2-version}</version>
-			</dependency>
-
-			<!-- Commons dependencies -->
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-collections4</artifactId>
-				<version>${commons-collections4-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-beanutils</groupId>
-				<artifactId>commons-beanutils</artifactId>
-				<version>${commons-beanutils-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-collections</groupId>
-				<artifactId>commons-collections</artifactId>
-				<version>${commons-collections-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-io</groupId>
-				<artifactId>commons-io</artifactId>
-				<version>${commons-io-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-lang</groupId>
-				<artifactId>commons-lang</artifactId>
-				<version>${commons-lang-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-lang3</artifactId>
-				<version>${commons-lang3-version}</version>
-			</dependency>
-
-			<!-- Web Dependencies -->
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>${servlet.version}</version>
-				<scope>provided</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.glassfish.jersey.core</groupId>
-				<artifactId>jersey-common</artifactId>
-				<version>${jersey-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.glassfish.jersey.core</groupId>
-				<artifactId>jersey-server</artifactId>
-				<version>${jersey-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.glassfish.jersey.containers</groupId>
-				<artifactId>jersey-container-servlet</artifactId>
-				<version>${jersey-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.glassfish.jersey.media</groupId>
-				<artifactId>jersey-media-json-jackson</artifactId>
-				<version>${jersey-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.glassfish.jersey.media</groupId>
-				<artifactId>jersey-media-jaxb</artifactId>
-				<version>${jersey-version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.glassfish.jersey.ext</groupId>
-				<artifactId>jersey-spring3</artifactId>
-				<version>${jersey-version}</version>
-			</dependency>
-
-			<!-- JCommander dependencies -->
-
-			<dependency>
-				<groupId>com.beust</groupId>
-				<artifactId>jcommander</artifactId>
-				<version>${jcommander-version}</version>
-			</dependency>
-
-			<!-- Documentation Dependencies -->
-			<dependency>
-				<groupId>io.swagger</groupId>
-				<artifactId>swagger-jersey2-jaxrs</artifactId>
-				<version>${swagger-jersey2-jaxrs-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.springfox</groupId>
-				<artifactId>springfox-swagger-ui</artifactId>
-				<version>${springfox-swagger}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>io.springfox</groupId>
-				<artifactId>springfox-swagger2</artifactId>
-				<version>${springfox-swagger}</version>
-			</dependency>
-
-			<!-- Test dependencies -->
-
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>${junit-version}</version>
-				<scope>test</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.everit.json</groupId>
-				<artifactId>org.everit.json.schema</artifactId>
-				<version>${test-everit-json-schema-version}</version>
-				<scope>test</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.mockito</groupId>
-				<artifactId>mockito-core</artifactId>
-				<version>${mockito-core-version}</version>
-				<scope>test</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.mockito</groupId>
-				<artifactId>mockito-all</artifactId>
-				<version>${mockito-all-version}</version>
-				<scope>test</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.hsqldb</groupId>
-				<artifactId>hsqldb</artifactId>
-				<version>${hsqldb-version}</version>
-				<scope>test</scope>
-			</dependency>
-
-		</dependencies>
-	</dependencyManagement>
-	<build>
-		<plugins>
-            		<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>versions-maven-plugin</artifactId>
-				<version>${versions-maven-plugin-version}</version>
-				<inherited>false</inherited>
-				<configuration>
-					<outputFile>outdated-dependencies.txt</outputFile>
-				</configuration>
-			</plugin>				
-		</plugins>
-	</build>
+
+    <properties>
+
+        <!-- version properties -->
+        <commons-collections-version>3.2.2</commons-collections-version>
+        <commons-collections4-version>4.1</commons-collections4-version>
+        <commons-beanutils-version>1.9.3</commons-beanutils-version>
+        <commons-io-version>2.5</commons-io-version>
+        <commons-lang-version>2.6</commons-lang-version>
+        <commons-lang3-version>3.5</commons-lang3-version>
+
+        <flyway-version>4.2.0</flyway-version>
+
+        <gson-version>2.8.1</gson-version>
+        <guava-version>22.0</guava-version>
+
+        <h2-version>1.4.195</h2-version>
+        <hsqldb-version>2.4.0</hsqldb-version>
+
+        <jackson-core-version>2.8.5</jackson-core-version>
+        <jcommander-version>1.72</jcommander-version>
+        <jersey-version>2.24.1</jersey-version>
+        <jsonschema2pojo-version>0.4.35</jsonschema2pojo-version>
+        <json-smart>2.3</json-smart>
+        <junit-version>4.12</junit-version>
+
+        <log4j-version>1.2.17</log4j-version>
+
+        <mockito-core-version>2.8.9</mockito-core-version>
+        <mockito-all-version>1.10.19</mockito-all-version>
+
+        <org.hibernate-version>5.2.3.Final</org.hibernate-version>
+        <org.hibernate.javax.persistence-version>1.0.0.Final</org.hibernate.javax.persistence-version>
+        <org.postgresql-version>9.4.1212.jre7</org.postgresql-version>
+
+        <rabbitmq-client-version>4.0.0</rabbitmq-client-version>
+
+        <servlet.version>3.1.0</servlet.version>
+        <slf4j-api-version>1.7.21</slf4j-api-version>
+        <springfox-swagger>2.7.0</springfox-swagger>
+        <spring-amqp-version>1.6.5.RELEASE</spring-amqp-version>
+        <spring-boot.version>1.5.3.RELEASE</spring-boot.version>
+        <spring.cloud.version>1.1.0.RELEASE</spring.cloud.version>
+        <spring-core-version>4.3.8.RELEASE</spring-core-version>
+        <spring-rabbit-version>1.6.5.RELEASE</spring-rabbit-version>
+        <spring-retry-version>1.1.5.RELEASE</spring-retry-version>
+        <spring-security-core-version>4.2.2.RELEASE</spring-security-core-version>
+        <spring.version>4.0.4.RELEASE</spring.version>
+        <swagger-jersey2-jaxrs-version>1.5.13</swagger-jersey2-jaxrs-version>
+
+        <test-everit-json-schema-version>1.5.1</test-everit-json-schema-version>
+
+        <validation.api-version>1.1.0.Final</validation.api-version>
+
+        <versions-maven-plugin-version>2.4</versions-maven-plugin-version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>net.minidev</groupId>
+                <artifactId>json-smart</artifactId>
+                <version>${json-smart}</version>
+            </dependency>
+
+            <!-- Spring dependencies -->
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.amqp</groupId>
+                <artifactId>spring-amqp</artifactId>
+                <version>${spring-amqp-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.amqp</groupId>
+                <artifactId>spring-rabbit</artifactId>
+                <version>${spring-rabbit-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-retry</artifactId>
+                <version>${spring-retry-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring-security-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.integration</groupId>
+                <artifactId>spring-integration-core</artifactId>
+                <version>${spring-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-config</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <version>${spring-boot.version}</version>
+
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>log4j-over-slf4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>ch.qos.logback</groupId>
+                        <artifactId>logback-classic</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-amqp</artifactId>
+                <version>${spring-boot.version}</version>
+
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-jersey</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Jackson dependencies -->
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-core-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rabbitmq</groupId>
+                <artifactId>amqp-client</artifactId>
+                <version>${rabbitmq-client-version}</version>
+            </dependency>
+
+            <!-- Google dependencies -->
+
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava-version}</version>
+            </dependency>
+
+            <!-- Logging dependencies -->
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-ext</artifactId>
+                <version>${slf4j-api-version}</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j-api-version}</version>
+            </dependency>
+
+            <!-- Json dependencies -->
+
+            <dependency>
+                <artifactId>jsonschema2pojo-core</artifactId>
+                <groupId>org.jsonschema2pojo</groupId>
+                <version>${jsonschema2pojo-version}</version>
+            </dependency>
+
+            <!-- Persistence dependencies -->
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${org.hibernate-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${org.postgresql-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.1-api</artifactId>
+                <version>${org.hibernate.javax.persistence-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${validation.api-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>${flyway-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2-version}</version>
+            </dependency>
+
+            <!-- Commons dependencies -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons-lang-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3-version}</version>
+            </dependency>
+
+            <!-- Web Dependencies -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-common</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.jersey.core</groupId>
+                <artifactId>jersey-server</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.jersey.containers</groupId>
+                <artifactId>jersey-container-servlet</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.jersey.media</groupId>
+                <artifactId>jersey-media-json-jackson</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.jersey.media</groupId>
+                <artifactId>jersey-media-jaxb</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.glassfish.jersey.ext</groupId>
+                <artifactId>jersey-spring3</artifactId>
+                <version>${jersey-version}</version>
+            </dependency>
+
+            <!-- JCommander dependencies -->
+
+            <dependency>
+                <groupId>com.beust</groupId>
+                <artifactId>jcommander</artifactId>
+                <version>${jcommander-version}</version>
+            </dependency>
+
+            <!-- Documentation Dependencies -->
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-jersey2-jaxrs</artifactId>
+                <version>${swagger-jersey2-jaxrs-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger}</version>
+            </dependency>
+
+            <!-- Test dependencies -->
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.everit.json</groupId>
+                <artifactId>org.everit.json.schema</artifactId>
+                <version>${test-everit-json-schema-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito-core-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito-all-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hsqldb</groupId>
+                <artifactId>hsqldb</artifactId>
+                <version>${hsqldb-version}</version>
+                <scope>test</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${versions-maven-plugin-version}</version>
+                <inherited>false</inherited>
+                <configuration>
+                    <outputFile>outdated-dependencies.txt</outputFile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
