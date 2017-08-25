@@ -9,21 +9,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/)
 ## [1.2.0] - 2017-06-30
 
 ### Added
-- The initial changelog file.
-- Inclusion of the Dell Inc. Copyright information.
+- Initial changelog file.
+- Dell Inc. copyright information.
 - Maven plugin versions listing outdated dependencies.
-- New dependency for json-smart added.
-- New dependency for spring-boot-dependencies added.
-- New dependency for spring-cloud-starter-config added.
-- New dependency for spring-boot-starter added with exclusions set.
-- New dependency for spring-boot-starter-web added.
-- New dependency for spring-boot-starter-amqp added.
-- New dependency for spring-boot-starter-aop added.
-- New dependency for spring-boot-starter-jersey added.
-- New dependency for spring-boot-starter-test added.
-- New dependency for springfox-swagger-ui added.
-- New dependency for springfox-swagger2 added.
-- New section added for plugins and versions-maven-plugin added, plus configurations.
+- New dependency for json-smart.
+- New dependency for spring-boot-dependencies.
+- New dependency for spring-cloud-starter-config.
+- New dependency for spring-boot-starter with exclusions set.
+- New dependency for spring-boot-starter-web.
+- New dependency for spring-boot-starter-amqp.
+- New dependency for spring-boot-starter-aop.
+- New dependency for spring-boot-starter-jersey.
+- New dependency for spring-boot-starter-test.
+- New dependency for springfox-swagger-ui.
+- New dependency for springfox-swagger2.
+- Section for plugins and versions-maven-plugin and configurations.
 
 
 ### Changed
@@ -43,12 +43,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/)
 - Updated the parent project to inherit from v0.2.3.
 
 ### Removed
-- The distribution properties as they now inherit from root-parent parent POM.
+- Distribution properties as they now inherit from root-parent parent POM.
 
-## 1.0.0 - 2017-01-17
+## [1.0.0] - 2017-01-17
 
 ### Added
-- The common-dependencies file.
+- common-dependencies file.
 - Added Spring dependencies.
 - Added Jackson dependencies.
 - Added Google dependencies.
