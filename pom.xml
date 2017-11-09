@@ -7,7 +7,7 @@
         Copyright (c) 2017 Dell Inc. or its subsidiaries.  All Rights Reserved.
     -->
 
-    <groupId>com.dell.cpsd</groupId>
+    <groupId>com.dell.temporary</groupId>
     <artifactId>common-dependencies</artifactId>
     <name>common-dependencies</name>
     <version>1.3.0-SNAPSHOT</version>
