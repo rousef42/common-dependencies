@@ -14,9 +14,9 @@
     <packaging>pom</packaging>
 
     <parent>
-        <groupId>com.dell.cpsd</groupId>
+        <groupId>com.dell.temporary</groupId>
         <artifactId>root-parent</artifactId>
-        <version>1.0.0</version>
+        <version>0.2.7-SNAPSHOT</version>
     </parent>
 
 
