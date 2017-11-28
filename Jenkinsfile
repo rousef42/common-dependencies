@@ -40,6 +40,11 @@ pipeline {
                 sh "mvn clean install -Dmaven.repo.local=.repo"
             }
         }
+      stage('Fortify Scan') { 
+         steps { 
+              runFortifyScan() 
+           } 
+      }
         stage('PasswordScan') {
             steps {
                 doPwScan()
