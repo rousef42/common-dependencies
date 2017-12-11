@@ -1,3 +1,4 @@
+@Library('Pipeline Libraries@pschami')
 UPSTREAM_TRIGGERS = [
     "root-parent"
 ]
