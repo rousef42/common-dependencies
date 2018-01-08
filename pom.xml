@@ -10,13 +10,13 @@
     <groupId>com.dell.cpsd</groupId>
     <artifactId>common-dependencies</artifactId>
     <name>common-dependencies</name>
-    <version>1.3.0-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>com.dell.cpsd</groupId>
         <artifactId>root-parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
     </parent>
 
 
@@ -75,7 +75,7 @@
 
     <properties>
 
-        <!-- version properties -->
+        <!-- External Dependency Properties -->
         <commons-collections-version>3.2.2</commons-collections-version>
         <commons-collections4-version>4.1</commons-collections4-version>
         <commons-beanutils-version>1.9.3</commons-beanutils-version>
@@ -126,6 +126,7 @@
 
         <validation.api-version>1.1.0.Final</validation.api-version>
 
+        <!-- Plugin Properties -->
         <versions-maven-plugin-version>2.4</versions-maven-plugin-version>
 
     </properties>
