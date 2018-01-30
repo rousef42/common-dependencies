@@ -21,9 +21,9 @@
 
 
     <scm>
-        <connection>scm:git:https://github.com/dellemc-symphony/common-dependencies.git</connection>
-        <developerConnection>scm:git:https://github.com/dellemc-symphony/common-dependencies.git</developerConnection>
-        <url>https://github.com/dellemc-symphony/common-dependencies/tree/master</url>
+        <connection>scm:git:https://github.com/rousef42/common-dependencies.git</connection>
+        <developerConnection>scm:git:https://github.com/rousef42/common-dependencies.git</developerConnection>
+        <url>https://github.com/rousef42/common-dependencies/tree/master</url>
         <tag>HEAD</tag>
     </scm>
 
